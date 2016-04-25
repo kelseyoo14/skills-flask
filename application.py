@@ -24,6 +24,7 @@ def application():
 
 @app.route("/application", methods=["POST"])
 def return_app_info():
+    """Takes in application-form.html, grabs user information, and returns application-response.html"""
 
     first_name = request.form.get("firstname")
     last_name = request.form.get("lastname")
@@ -35,6 +36,7 @@ def return_app_info():
                             full_name=fullname,
                             salary_amount=salary,
                             job=job_title)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
