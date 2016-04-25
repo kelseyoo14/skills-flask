@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Skills-HTML-CSS{% endblock %}
+{% block css %}"/static/styles.css"{% endblock %}
+
+{% block body %}
+    <h1>Application</h1>
+    <p>Please fill out the following form with some of your information.</p>
+
+
+    <form action="/application" method="POST">
+        <label for="first_name">First Name: <label>
+        <input type="text" name="firstname" id="first_name" class="background_color">
+        <br><br>
+        <label for="last_name">Last Name: <label>
+        <input type="text" name="lastname" id="last_name" class="background_color last_name">
+        <br><br>
+        <label for="salary_requirement">Salary Requirement: <label>
+        <input type="number" name="salaryrequirement" id="salary_requirement" class="background_color">
+        <br><br>
+        <label for="job_type">Job Type: <label>
+        <select name="job" id="job_type">
+            <option value="software-engineer">Software Engineer</option>
+            <option value="qa-engineer">QA Enginner</option>
+            <option value="product-manager">Product Engineer</option>
+        </select>
+        <br><br>
+        <input type="submit" class="background_color">
+    </form>
+{% endblock %}
